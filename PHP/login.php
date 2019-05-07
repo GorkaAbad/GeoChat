@@ -1,7 +1,7 @@
 <?php
 //Constantes
 
-$DB_DATABASE='Xgabad002_android'; #la base de datos a la que hay que conectarse# Se establece la conexión:
+$DB_DATABASE='Xgabad002_geochat'; #la base de datos a la que hay que conectarse# Se establece la conexión:
 $DB_SERVER='localhost'; #la dirección del servidor
 $DB_USER='Xgabad002'; #el usuario para esa base de datos
 $DB_PASS='P2CqT1HDtW'; #la clave para ese usuario

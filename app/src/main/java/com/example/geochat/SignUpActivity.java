@@ -69,7 +69,7 @@ public class SignUpActivity extends AppCompatActivity implements LoaderCallbacks
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_signUp);
+        setContentView(R.layout.activity_signup);
         // Set up the login form.
         mNickView = (AutoCompleteTextView) findViewById(R.id.nick);
         populateAutoComplete();
@@ -89,8 +89,8 @@ public class SignUpActivity extends AppCompatActivity implements LoaderCallbacks
             }
         });
 
-        Button mRegisterButton = (Button) findViewById(R.id.email_sign_in_button);
-        Button mEmailSignInButton = (Button) findViewById(R.id.register);
+        Button mRegisterButton = (Button) findViewById(R.id.register);
+        Button mEmailSignInButton = (Button) findViewById(R.id.signIn);
 
         mEmailSignInButton.setOnClickListener(new OnClickListener() {
             @Override
@@ -100,7 +100,7 @@ public class SignUpActivity extends AppCompatActivity implements LoaderCallbacks
                 startActivity(i);
             }
         });
-        mEmailSignInButton.setOnClickListener(new OnClickListener() {
+        mRegisterButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
                 attemptLogin();
