@@ -44,7 +44,7 @@ public class SignUpActivity extends AppCompatActivity implements LoaderCallbacks
      */
     private static final int REQUEST_READ_CONTACTS = 0;
 
-    private Database database = new Database("https://134.209.235.115/gabad002/WEB/loginr.php", this);
+    private Database database = new Database("https://134.209.235.115/gabad002/WEB/login.php", this);
 
     /**
      * A dummy authentication store containing known user names and passwords.
