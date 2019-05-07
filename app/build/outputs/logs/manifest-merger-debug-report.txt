@@ -1,0 +1,185 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/gorka/Git/GeoChat/app/src/main/AndroidManifest.xml:2:1-23:12
+INJECTED from /home/gorka/Git/GeoChat/app/src/main/AndroidManifest.xml:2:1-23:12
+INJECTED from /home/gorka/Git/GeoChat/app/src/main/AndroidManifest.xml:2:1-23:12
+INJECTED from /home/gorka/Git/GeoChat/app/src/main/AndroidManifest.xml:2:1-23:12
+MERGED from [com.android.support:design:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/51f91465d5a349b09676b527763d78aa/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:appcompat-v7:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/655a07581c0b79fde2ebfe6d8c451578/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:extensions:1.1.1] /home/gorka/.gradle/caches/transforms-2/files-2.1/2300823f8cbe952844e5fe0c172a302f/AndroidManifest.xml:17:1-30:12
+MERGED from [com.android.support:support-fragment:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/b914e1ae68734eacfa6d8c221a420bb9/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/c5e388d4ebd3821b26f1e3c7433ae9bd/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/13f2f926656e53bf47e2d1ca2ede86da/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/0c6e345c957eaa147737df8bcadece70/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/ad0df80c3b088fd00a9bd641b8350698/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/bffe229ac53e2e4851c0be409d9fe283/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/d86aa33f659983a67e79e85e2b7c31b0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:loader:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/38bdc7363fc5fc9373ac9ec82ba62f58/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/14a5743b4403a1312298536f0827160a/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/72d6f66b7584640a3dd773d326fc8164/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:drawerlayout:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/2a5cad6425611dd890276af14349a8af/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/2c74ffa2beffb9e34ef2674e53c88a67/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customview:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/c6ca2fadd9aee779e7e92299a5ce3508/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/225609209786839a2b5481536a385c4b/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/1d8a84bead69f7301d9049b5fd8e259c/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/f76e61c57cce366acd36dd3808486049/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/8944a6924395723e4e0322640d6902be/AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:cursoradapter:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/58cfa6866cc80c0b978333f3fc9db096/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:cardview-v7:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/42e51b299a2c31a4274162e753b842ad/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/gorka/.gradle/caches/transforms-2/files-2.1/e078ba5a1981db618c9b46113936c4ef/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/gorka/.gradle/caches/transforms-2/files-2.1/f9d7147b0abc305af973c1eecc99cea0/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/gorka/.gradle/caches/transforms-2/files-2.1/67aa535cff730864f59f55bbc0ae0ed4/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] /home/gorka/.gradle/caches/transforms-2/files-2.1/cad0a03bea7df9b8439656d07105ae5a/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/gorka/.gradle/caches/transforms-2/files-2.1/772ef82c2ba778e422796748ab0b75b3/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:documentfile:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/f652ef9f4416ba5dcd8a54c721802112/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/29da07b01fddf8109cbf7abb457a7dc5/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/b2d4bbde16e31199c7db802d19712cd6/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:interpolator:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/b994ef27b9558823541bbc193c2f2aea/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/gorka/.gradle/caches/transforms-2/files-2.1/569aee9447006b39eecd3412f45b759e/AndroidManifest.xml:2:1-11:12
+INJECTED from /home/gorka/Git/GeoChat/app/src/main/AndroidManifest.xml:2:1-23:12
+INJECTED from /home/gorka/Git/GeoChat/app/src/main/AndroidManifest.xml:2:1-23:12
+INJECTED from /home/gorka/Git/GeoChat/app/src/main/AndroidManifest.xml:2:1-23:12
+	package
+		ADDED from /home/gorka/Git/GeoChat/app/src/main/AndroidManifest.xml:3:5-34
+		INJECTED from /home/gorka/Git/GeoChat/app/src/main/AndroidManifest.xml
+		INJECTED from /home/gorka/Git/GeoChat/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /home/gorka/Git/GeoChat/app/src/main/AndroidManifest.xml
+		ADDED from /home/gorka/Git/GeoChat/app/src/main/AndroidManifest.xml:2:1-23:12
+		INJECTED from /home/gorka/Git/GeoChat/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /home/gorka/Git/GeoChat/app/src/main/AndroidManifest.xml
+		ADDED from /home/gorka/Git/GeoChat/app/src/main/AndroidManifest.xml:2:1-23:12
+		INJECTED from /home/gorka/Git/GeoChat/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/gorka/Git/GeoChat/app/src/main/AndroidManifest.xml:2:11-69
+application
+ADDED from /home/gorka/Git/GeoChat/app/src/main/AndroidManifest.xml:5:5-21:19
+MERGED from [com.android.support:design:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/51f91465d5a349b09676b527763d78aa/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:design:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/51f91465d5a349b09676b527763d78aa/AndroidManifest.xml:22:5-20
+MERGED from [android.arch.lifecycle:extensions:1.1.1] /home/gorka/.gradle/caches/transforms-2/files-2.1/2300823f8cbe952844e5fe0c172a302f/AndroidManifest.xml:22:5-28:19
+MERGED from [android.arch.lifecycle:extensions:1.1.1] /home/gorka/.gradle/caches/transforms-2/files-2.1/2300823f8cbe952844e5fe0c172a302f/AndroidManifest.xml:22:5-28:19
+MERGED from [com.android.support:support-compat:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/f76e61c57cce366acd36dd3808486049/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:support-compat:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/f76e61c57cce366acd36dd3808486049/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/8944a6924395723e4e0322640d6902be/AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/8944a6924395723e4e0322640d6902be/AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/gorka/.gradle/caches/transforms-2/files-2.1/569aee9447006b39eecd3412f45b759e/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/gorka/.gradle/caches/transforms-2/files-2.1/569aee9447006b39eecd3412f45b759e/AndroidManifest.xml:9:5-20
+	android:appComponentFactory
+		ADDED from [com.android.support:support-compat:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/f76e61c57cce366acd36dd3808486049/AndroidManifest.xml:22:18-91
+	android:supportsRtl
+		ADDED from /home/gorka/Git/GeoChat/app/src/main/AndroidManifest.xml:10:9-35
+	android:label
+		ADDED from /home/gorka/Git/GeoChat/app/src/main/AndroidManifest.xml:8:9-41
+	android:roundIcon
+		ADDED from /home/gorka/Git/GeoChat/app/src/main/AndroidManifest.xml:9:9-54
+	android:icon
+		ADDED from /home/gorka/Git/GeoChat/app/src/main/AndroidManifest.xml:7:9-43
+	android:allowBackup
+		ADDED from /home/gorka/Git/GeoChat/app/src/main/AndroidManifest.xml:6:9-35
+	android:theme
+		ADDED from /home/gorka/Git/GeoChat/app/src/main/AndroidManifest.xml:11:9-40
+activity#com.example.geochat.ui.login.LoginActivity
+ADDED from /home/gorka/Git/GeoChat/app/src/main/AndroidManifest.xml:12:9-20:20
+	android:label
+		ADDED from /home/gorka/Git/GeoChat/app/src/main/AndroidManifest.xml:14:13-45
+	android:name
+		ADDED from /home/gorka/Git/GeoChat/app/src/main/AndroidManifest.xml:13:13-51
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /home/gorka/Git/GeoChat/app/src/main/AndroidManifest.xml:15:13-19:29
+action#android.intent.action.MAIN
+ADDED from /home/gorka/Git/GeoChat/app/src/main/AndroidManifest.xml:16:17-69
+	android:name
+		ADDED from /home/gorka/Git/GeoChat/app/src/main/AndroidManifest.xml:16:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/gorka/Git/GeoChat/app/src/main/AndroidManifest.xml:18:17-77
+	android:name
+		ADDED from /home/gorka/Git/GeoChat/app/src/main/AndroidManifest.xml:18:27-74
+uses-sdk
+INJECTED from /home/gorka/Git/GeoChat/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/gorka/Git/GeoChat/app/src/main/AndroidManifest.xml
+INJECTED from /home/gorka/Git/GeoChat/app/src/main/AndroidManifest.xml
+MERGED from [com.android.support:design:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/51f91465d5a349b09676b527763d78aa/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/51f91465d5a349b09676b527763d78aa/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/655a07581c0b79fde2ebfe6d8c451578/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/655a07581c0b79fde2ebfe6d8c451578/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:extensions:1.1.1] /home/gorka/.gradle/caches/transforms-2/files-2.1/2300823f8cbe952844e5fe0c172a302f/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:extensions:1.1.1] /home/gorka/.gradle/caches/transforms-2/files-2.1/2300823f8cbe952844e5fe0c172a302f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/b914e1ae68734eacfa6d8c221a420bb9/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/b914e1ae68734eacfa6d8c221a420bb9/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/c5e388d4ebd3821b26f1e3c7433ae9bd/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/c5e388d4ebd3821b26f1e3c7433ae9bd/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/13f2f926656e53bf47e2d1ca2ede86da/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/13f2f926656e53bf47e2d1ca2ede86da/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/0c6e345c957eaa147737df8bcadece70/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/0c6e345c957eaa147737df8bcadece70/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/ad0df80c3b088fd00a9bd641b8350698/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/ad0df80c3b088fd00a9bd641b8350698/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/bffe229ac53e2e4851c0be409d9fe283/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/bffe229ac53e2e4851c0be409d9fe283/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/d86aa33f659983a67e79e85e2b7c31b0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/d86aa33f659983a67e79e85e2b7c31b0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/38bdc7363fc5fc9373ac9ec82ba62f58/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/38bdc7363fc5fc9373ac9ec82ba62f58/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/14a5743b4403a1312298536f0827160a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/14a5743b4403a1312298536f0827160a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/72d6f66b7584640a3dd773d326fc8164/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/72d6f66b7584640a3dd773d326fc8164/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/2a5cad6425611dd890276af14349a8af/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/2a5cad6425611dd890276af14349a8af/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/2c74ffa2beffb9e34ef2674e53c88a67/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/2c74ffa2beffb9e34ef2674e53c88a67/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/c6ca2fadd9aee779e7e92299a5ce3508/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/c6ca2fadd9aee779e7e92299a5ce3508/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/225609209786839a2b5481536a385c4b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/225609209786839a2b5481536a385c4b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/1d8a84bead69f7301d9049b5fd8e259c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/1d8a84bead69f7301d9049b5fd8e259c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/f76e61c57cce366acd36dd3808486049/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/f76e61c57cce366acd36dd3808486049/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/8944a6924395723e4e0322640d6902be/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/8944a6924395723e4e0322640d6902be/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/58cfa6866cc80c0b978333f3fc9db096/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/58cfa6866cc80c0b978333f3fc9db096/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/42e51b299a2c31a4274162e753b842ad/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/42e51b299a2c31a4274162e753b842ad/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/gorka/.gradle/caches/transforms-2/files-2.1/e078ba5a1981db618c9b46113936c4ef/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/gorka/.gradle/caches/transforms-2/files-2.1/e078ba5a1981db618c9b46113936c4ef/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/gorka/.gradle/caches/transforms-2/files-2.1/f9d7147b0abc305af973c1eecc99cea0/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/gorka/.gradle/caches/transforms-2/files-2.1/f9d7147b0abc305af973c1eecc99cea0/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/gorka/.gradle/caches/transforms-2/files-2.1/67aa535cff730864f59f55bbc0ae0ed4/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/gorka/.gradle/caches/transforms-2/files-2.1/67aa535cff730864f59f55bbc0ae0ed4/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /home/gorka/.gradle/caches/transforms-2/files-2.1/cad0a03bea7df9b8439656d07105ae5a/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /home/gorka/.gradle/caches/transforms-2/files-2.1/cad0a03bea7df9b8439656d07105ae5a/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/gorka/.gradle/caches/transforms-2/files-2.1/772ef82c2ba778e422796748ab0b75b3/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/gorka/.gradle/caches/transforms-2/files-2.1/772ef82c2ba778e422796748ab0b75b3/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/f652ef9f4416ba5dcd8a54c721802112/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/f652ef9f4416ba5dcd8a54c721802112/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/29da07b01fddf8109cbf7abb457a7dc5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/29da07b01fddf8109cbf7abb457a7dc5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/b2d4bbde16e31199c7db802d19712cd6/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/b2d4bbde16e31199c7db802d19712cd6/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/b994ef27b9558823541bbc193c2f2aea/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /home/gorka/.gradle/caches/transforms-2/files-2.1/b994ef27b9558823541bbc193c2f2aea/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/gorka/.gradle/caches/transforms-2/files-2.1/569aee9447006b39eecd3412f45b759e/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/gorka/.gradle/caches/transforms-2/files-2.1/569aee9447006b39eecd3412f45b759e/AndroidManifest.xml:5:5-7:41
+INJECTED from /home/gorka/Git/GeoChat/app/src/main/AndroidManifest.xml
+INJECTED from /home/gorka/Git/GeoChat/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /home/gorka/Git/GeoChat/app/src/main/AndroidManifest.xml
+		ADDED from /home/gorka/Git/GeoChat/app/src/main/AndroidManifest.xml
+		INJECTED from /home/gorka/Git/GeoChat/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/gorka/Git/GeoChat/app/src/main/AndroidManifest.xml
+		ADDED from /home/gorka/Git/GeoChat/app/src/main/AndroidManifest.xml
+		INJECTED from /home/gorka/Git/GeoChat/app/src/main/AndroidManifest.xml
+provider#android.arch.lifecycle.ProcessLifecycleOwnerInitializer
+ADDED from [android.arch.lifecycle:extensions:1.1.1] /home/gorka/.gradle/caches/transforms-2/files-2.1/2300823f8cbe952844e5fe0c172a302f/AndroidManifest.xml:23:9-27:43
+	android:authorities
+		ADDED from [android.arch.lifecycle:extensions:1.1.1] /home/gorka/.gradle/caches/transforms-2/files-2.1/2300823f8cbe952844e5fe0c172a302f/AndroidManifest.xml:25:13-68
+	android:multiprocess
+		ADDED from [android.arch.lifecycle:extensions:1.1.1] /home/gorka/.gradle/caches/transforms-2/files-2.1/2300823f8cbe952844e5fe0c172a302f/AndroidManifest.xml:27:13-40
+	android:exported
+		ADDED from [android.arch.lifecycle:extensions:1.1.1] /home/gorka/.gradle/caches/transforms-2/files-2.1/2300823f8cbe952844e5fe0c172a302f/AndroidManifest.xml:26:13-37
+	android:name
+		ADDED from [android.arch.lifecycle:extensions:1.1.1] /home/gorka/.gradle/caches/transforms-2/files-2.1/2300823f8cbe952844e5fe0c172a302f/AndroidManifest.xml:24:13-83
