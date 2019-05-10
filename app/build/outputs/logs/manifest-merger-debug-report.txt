@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/leireibargutxi/Desktop/GeoChat/app/src/main/AndroidManifest.xml:2:1-45:12
-INJECTED from /Users/leireibargutxi/Desktop/GeoChat/app/src/main/AndroidManifest.xml:2:1-45:12
-INJECTED from /Users/leireibargutxi/Desktop/GeoChat/app/src/main/AndroidManifest.xml:2:1-45:12
-INJECTED from /Users/leireibargutxi/Desktop/GeoChat/app/src/main/AndroidManifest.xml:2:1-45:12
+ADDED from /Users/leireibargutxi/Documents/GeoChat/app/src/main/AndroidManifest.xml:2:1-45:12
+INJECTED from /Users/leireibargutxi/Documents/GeoChat/app/src/main/AndroidManifest.xml:2:1-45:12
+INJECTED from /Users/leireibargutxi/Documents/GeoChat/app/src/main/AndroidManifest.xml:2:1-45:12
+INJECTED from /Users/leireibargutxi/Documents/GeoChat/app/src/main/AndroidManifest.xml:2:1-45:12
 MERGED from [com.android.support:multidex:1.0.3] /Users/leireibargutxi/.gradle/caches/transforms-2/files-2.1/2d56bec41c8f73ca3bf53d3defdf6df3/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:design:28.0.0] /Users/leireibargutxi/.gradle/caches/transforms-2/files-2.1/c7d72043b9ae3a8ecbe742f764c6d721/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.gms:play-services:12.0.1] /Users/leireibargutxi/.gradle/caches/transforms-2/files-2.1/0e2ee2072060462138a628f847c40e98/AndroidManifest.xml:2:1-6:12
@@ -140,25 +140,25 @@ MERGED from [com.google.android.gms:play-services-vision-common-license:12.0.1] 
 MERGED from [com.google.android.gms:play-services-vision-license:12.0.1] /Users/leireibargutxi/.gradle/caches/transforms-2/files-2.1/cafe3516b786f92144f51affbc9442ea/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.gms:play-services-wallet-license:12.0.1] /Users/leireibargutxi/.gradle/caches/transforms-2/files-2.1/a3d7e79177529a79d305b12d796465c6/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.gms:play-services-wearable-license:12.0.1] /Users/leireibargutxi/.gradle/caches/transforms-2/files-2.1/23b32390075f4ad44ca7ce296e49b747/AndroidManifest.xml:17:1-24:12
-INJECTED from /Users/leireibargutxi/Desktop/GeoChat/app/src/main/AndroidManifest.xml:2:1-45:12
-INJECTED from /Users/leireibargutxi/Desktop/GeoChat/app/src/main/AndroidManifest.xml:2:1-45:12
-INJECTED from /Users/leireibargutxi/Desktop/GeoChat/app/src/main/AndroidManifest.xml:2:1-45:12
+INJECTED from /Users/leireibargutxi/Documents/GeoChat/app/src/main/AndroidManifest.xml:2:1-45:12
+INJECTED from /Users/leireibargutxi/Documents/GeoChat/app/src/main/AndroidManifest.xml:2:1-45:12
+INJECTED from /Users/leireibargutxi/Documents/GeoChat/app/src/main/AndroidManifest.xml:2:1-45:12
 	package
-		ADDED from /Users/leireibargutxi/Desktop/GeoChat/app/src/main/AndroidManifest.xml:3:5-34
-		INJECTED from /Users/leireibargutxi/Desktop/GeoChat/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/leireibargutxi/Desktop/GeoChat/app/src/main/AndroidManifest.xml
+		ADDED from /Users/leireibargutxi/Documents/GeoChat/app/src/main/AndroidManifest.xml:3:5-34
+		INJECTED from /Users/leireibargutxi/Documents/GeoChat/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/leireibargutxi/Documents/GeoChat/app/src/main/AndroidManifest.xml
 	android:versionName
-		INJECTED from /Users/leireibargutxi/Desktop/GeoChat/app/src/main/AndroidManifest.xml
-		ADDED from /Users/leireibargutxi/Desktop/GeoChat/app/src/main/AndroidManifest.xml:2:1-45:12
-		INJECTED from /Users/leireibargutxi/Desktop/GeoChat/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/leireibargutxi/Documents/GeoChat/app/src/main/AndroidManifest.xml
+		ADDED from /Users/leireibargutxi/Documents/GeoChat/app/src/main/AndroidManifest.xml:2:1-45:12
+		INJECTED from /Users/leireibargutxi/Documents/GeoChat/app/src/main/AndroidManifest.xml
 	android:versionCode
-		INJECTED from /Users/leireibargutxi/Desktop/GeoChat/app/src/main/AndroidManifest.xml
-		ADDED from /Users/leireibargutxi/Desktop/GeoChat/app/src/main/AndroidManifest.xml:2:1-45:12
-		INJECTED from /Users/leireibargutxi/Desktop/GeoChat/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/leireibargutxi/Documents/GeoChat/app/src/main/AndroidManifest.xml
+		ADDED from /Users/leireibargutxi/Documents/GeoChat/app/src/main/AndroidManifest.xml:2:1-45:12
+		INJECTED from /Users/leireibargutxi/Documents/GeoChat/app/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from /Users/leireibargutxi/Desktop/GeoChat/app/src/main/AndroidManifest.xml:2:11-69
+		ADDED from /Users/leireibargutxi/Documents/GeoChat/app/src/main/AndroidManifest.xml:2:11-69
 uses-permission#android.permission.INTERNET
-ADDED from /Users/leireibargutxi/Desktop/GeoChat/app/src/main/AndroidManifest.xml:4:5-67
+ADDED from /Users/leireibargutxi/Documents/GeoChat/app/src/main/AndroidManifest.xml:4:5-67
 MERGED from [com.google.android.gms:play-services-maps:16.1.0] /Users/leireibargutxi/.gradle/caches/transforms-2/files-2.1/04bd9dd1f98e15a7874b6aa117ae12a3/AndroidManifest.xml:24:5-67
 MERGED from [com.google.android.gms:play-services-maps:16.1.0] /Users/leireibargutxi/.gradle/caches/transforms-2/files-2.1/04bd9dd1f98e15a7874b6aa117ae12a3/AndroidManifest.xml:24:5-67
 MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.1] /Users/leireibargutxi/.gradle/caches/transforms-2/files-2.1/334b2dcf2312babe93326043b3e54cac/AndroidManifest.xml:22:5-67
@@ -186,9 +186,9 @@ MERGED from [com.google.android.gms:play-services-analytics-impl:12.0.1] /Users/
 MERGED from [com.google.android.gms:play-services-ads-lite:12.0.1] /Users/leireibargutxi/.gradle/caches/transforms-2/files-2.1/e1ddbab15a1195e3a92f987fa7c4a587/AndroidManifest.xml:23:5-67
 MERGED from [com.google.android.gms:play-services-ads-lite:12.0.1] /Users/leireibargutxi/.gradle/caches/transforms-2/files-2.1/e1ddbab15a1195e3a92f987fa7c4a587/AndroidManifest.xml:23:5-67
 	android:name
-		ADDED from /Users/leireibargutxi/Desktop/GeoChat/app/src/main/AndroidManifest.xml:4:22-64
+		ADDED from /Users/leireibargutxi/Documents/GeoChat/app/src/main/AndroidManifest.xml:4:22-64
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from /Users/leireibargutxi/Desktop/GeoChat/app/src/main/AndroidManifest.xml:5:5-79
+ADDED from /Users/leireibargutxi/Documents/GeoChat/app/src/main/AndroidManifest.xml:5:5-79
 MERGED from [com.google.android.gms:play-services-maps:16.1.0] /Users/leireibargutxi/.gradle/caches/transforms-2/files-2.1/04bd9dd1f98e15a7874b6aa117ae12a3/AndroidManifest.xml:23:5-79
 MERGED from [com.google.android.gms:play-services-maps:16.1.0] /Users/leireibargutxi/.gradle/caches/transforms-2/files-2.1/04bd9dd1f98e15a7874b6aa117ae12a3/AndroidManifest.xml:23:5-79
 MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.1] /Users/leireibargutxi/.gradle/caches/transforms-2/files-2.1/334b2dcf2312babe93326043b3e54cac/AndroidManifest.xml:23:5-79
@@ -210,17 +210,17 @@ MERGED from [com.google.android.gms:play-services-analytics-impl:12.0.1] /Users/
 MERGED from [com.google.android.gms:play-services-ads-lite:12.0.1] /Users/leireibargutxi/.gradle/caches/transforms-2/files-2.1/e1ddbab15a1195e3a92f987fa7c4a587/AndroidManifest.xml:24:5-79
 MERGED from [com.google.android.gms:play-services-ads-lite:12.0.1] /Users/leireibargutxi/.gradle/caches/transforms-2/files-2.1/e1ddbab15a1195e3a92f987fa7c4a587/AndroidManifest.xml:24:5-79
 	android:name
-		ADDED from /Users/leireibargutxi/Desktop/GeoChat/app/src/main/AndroidManifest.xml:5:22-76
+		ADDED from /Users/leireibargutxi/Documents/GeoChat/app/src/main/AndroidManifest.xml:5:22-76
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from /Users/leireibargutxi/Desktop/GeoChat/app/src/main/AndroidManifest.xml:6:5-78
+ADDED from /Users/leireibargutxi/Documents/GeoChat/app/src/main/AndroidManifest.xml:6:5-78
 	android:name
-		ADDED from /Users/leireibargutxi/Desktop/GeoChat/app/src/main/AndroidManifest.xml:6:22-76
+		ADDED from /Users/leireibargutxi/Documents/GeoChat/app/src/main/AndroidManifest.xml:6:22-76
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from /Users/leireibargutxi/Desktop/GeoChat/app/src/main/AndroidManifest.xml:7:5-80
+ADDED from /Users/leireibargutxi/Documents/GeoChat/app/src/main/AndroidManifest.xml:7:5-80
 	android:name
-		ADDED from /Users/leireibargutxi/Desktop/GeoChat/app/src/main/AndroidManifest.xml:7:22-78
+		ADDED from /Users/leireibargutxi/Documents/GeoChat/app/src/main/AndroidManifest.xml:7:22-78
 application
-ADDED from /Users/leireibargutxi/Desktop/GeoChat/app/src/main/AndroidManifest.xml:9:5-43:19
+ADDED from /Users/leireibargutxi/Documents/GeoChat/app/src/main/AndroidManifest.xml:9:5-43:19
 MERGED from [com.android.support:design:28.0.0] /Users/leireibargutxi/.gradle/caches/transforms-2/files-2.1/c7d72043b9ae3a8ecbe742f764c6d721/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:design:28.0.0] /Users/leireibargutxi/.gradle/caches/transforms-2/files-2.1/c7d72043b9ae3a8ecbe742f764c6d721/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.gms:play-services:12.0.1] /Users/leireibargutxi/.gradle/caches/transforms-2/files-2.1/0e2ee2072060462138a628f847c40e98/AndroidManifest.xml:5:5-20
@@ -416,79 +416,79 @@ MERGED from [com.google.android.gms:play-services-wearable-license:12.0.1] /User
 	android:appComponentFactory
 		ADDED from [com.android.support:support-compat:28.0.0] /Users/leireibargutxi/.gradle/caches/transforms-2/files-2.1/086d861f95573e5e4aeec94d2abbb7ab/AndroidManifest.xml:22:18-91
 	android:supportsRtl
-		ADDED from /Users/leireibargutxi/Desktop/GeoChat/app/src/main/AndroidManifest.xml:14:9-35
+		ADDED from /Users/leireibargutxi/Documents/GeoChat/app/src/main/AndroidManifest.xml:14:9-35
 	android:label
-		ADDED from /Users/leireibargutxi/Desktop/GeoChat/app/src/main/AndroidManifest.xml:12:9-41
+		ADDED from /Users/leireibargutxi/Documents/GeoChat/app/src/main/AndroidManifest.xml:12:9-41
 	android:roundIcon
-		ADDED from /Users/leireibargutxi/Desktop/GeoChat/app/src/main/AndroidManifest.xml:13:9-54
+		ADDED from /Users/leireibargutxi/Documents/GeoChat/app/src/main/AndroidManifest.xml:13:9-54
 	android:icon
-		ADDED from /Users/leireibargutxi/Desktop/GeoChat/app/src/main/AndroidManifest.xml:11:9-43
+		ADDED from /Users/leireibargutxi/Documents/GeoChat/app/src/main/AndroidManifest.xml:11:9-43
 	android:allowBackup
-		ADDED from /Users/leireibargutxi/Desktop/GeoChat/app/src/main/AndroidManifest.xml:10:9-35
+		ADDED from /Users/leireibargutxi/Documents/GeoChat/app/src/main/AndroidManifest.xml:10:9-35
 	android:theme
-		ADDED from /Users/leireibargutxi/Desktop/GeoChat/app/src/main/AndroidManifest.xml:15:9-40
+		ADDED from /Users/leireibargutxi/Documents/GeoChat/app/src/main/AndroidManifest.xml:15:9-40
 activity#com.example.geochat.LoginActivity
-ADDED from /Users/leireibargutxi/Desktop/GeoChat/app/src/main/AndroidManifest.xml:16:9-23:20
+ADDED from /Users/leireibargutxi/Documents/GeoChat/app/src/main/AndroidManifest.xml:16:9-23:20
 	android:label
-		ADDED from /Users/leireibargutxi/Desktop/GeoChat/app/src/main/AndroidManifest.xml:18:13-56
+		ADDED from /Users/leireibargutxi/Documents/GeoChat/app/src/main/AndroidManifest.xml:18:13-56
 	android:name
-		ADDED from /Users/leireibargutxi/Desktop/GeoChat/app/src/main/AndroidManifest.xml:17:13-42
+		ADDED from /Users/leireibargutxi/Documents/GeoChat/app/src/main/AndroidManifest.xml:17:13-42
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/leireibargutxi/Desktop/GeoChat/app/src/main/AndroidManifest.xml:19:13-22:29
+ADDED from /Users/leireibargutxi/Documents/GeoChat/app/src/main/AndroidManifest.xml:19:13-22:29
 action#android.intent.action.MAIN
-ADDED from /Users/leireibargutxi/Desktop/GeoChat/app/src/main/AndroidManifest.xml:20:17-69
+ADDED from /Users/leireibargutxi/Documents/GeoChat/app/src/main/AndroidManifest.xml:20:17-69
 	android:name
-		ADDED from /Users/leireibargutxi/Desktop/GeoChat/app/src/main/AndroidManifest.xml:20:25-66
+		ADDED from /Users/leireibargutxi/Documents/GeoChat/app/src/main/AndroidManifest.xml:20:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/leireibargutxi/Desktop/GeoChat/app/src/main/AndroidManifest.xml:21:17-77
+ADDED from /Users/leireibargutxi/Documents/GeoChat/app/src/main/AndroidManifest.xml:21:17-77
 	android:name
-		ADDED from /Users/leireibargutxi/Desktop/GeoChat/app/src/main/AndroidManifest.xml:21:27-74
+		ADDED from /Users/leireibargutxi/Documents/GeoChat/app/src/main/AndroidManifest.xml:21:27-74
 activity#com.example.geochat.SignUpActivity
-ADDED from /Users/leireibargutxi/Desktop/GeoChat/app/src/main/AndroidManifest.xml:24:9-25:68
+ADDED from /Users/leireibargutxi/Documents/GeoChat/app/src/main/AndroidManifest.xml:24:9-25:68
 	android:label
-		ADDED from /Users/leireibargutxi/Desktop/GeoChat/app/src/main/AndroidManifest.xml:25:13-56
+		ADDED from /Users/leireibargutxi/Documents/GeoChat/app/src/main/AndroidManifest.xml:25:13-56
 	android:name
-		ADDED from /Users/leireibargutxi/Desktop/GeoChat/app/src/main/AndroidManifest.xml:24:19-49
+		ADDED from /Users/leireibargutxi/Documents/GeoChat/app/src/main/AndroidManifest.xml:24:19-49
 activity#com.example.geochat.MapActivity
-ADDED from /Users/leireibargutxi/Desktop/GeoChat/app/src/main/AndroidManifest.xml:26:9-58
+ADDED from /Users/leireibargutxi/Documents/GeoChat/app/src/main/AndroidManifest.xml:26:9-58
 	android:name
-		ADDED from /Users/leireibargutxi/Desktop/GeoChat/app/src/main/AndroidManifest.xml:26:19-46
+		ADDED from /Users/leireibargutxi/Documents/GeoChat/app/src/main/AndroidManifest.xml:26:19-46
 activity#com.example.geochat.MainActivity
-ADDED from /Users/leireibargutxi/Desktop/GeoChat/app/src/main/AndroidManifest.xml:27:9-28:68
+ADDED from /Users/leireibargutxi/Documents/GeoChat/app/src/main/AndroidManifest.xml:27:9-28:68
 	android:label
-		ADDED from /Users/leireibargutxi/Desktop/GeoChat/app/src/main/AndroidManifest.xml:28:13-56
+		ADDED from /Users/leireibargutxi/Documents/GeoChat/app/src/main/AndroidManifest.xml:28:13-56
 	android:name
-		ADDED from /Users/leireibargutxi/Desktop/GeoChat/app/src/main/AndroidManifest.xml:27:19-47
+		ADDED from /Users/leireibargutxi/Documents/GeoChat/app/src/main/AndroidManifest.xml:27:19-47
 service#com.example.geochat.Firebase
-ADDED from /Users/leireibargutxi/Desktop/GeoChat/app/src/main/AndroidManifest.xml:29:9-36:19
+ADDED from /Users/leireibargutxi/Documents/GeoChat/app/src/main/AndroidManifest.xml:29:9-36:19
 	android:enabled
-		ADDED from /Users/leireibargutxi/Desktop/GeoChat/app/src/main/AndroidManifest.xml:31:13-35
+		ADDED from /Users/leireibargutxi/Documents/GeoChat/app/src/main/AndroidManifest.xml:31:13-35
 	android:exported
-		ADDED from /Users/leireibargutxi/Desktop/GeoChat/app/src/main/AndroidManifest.xml:32:13-36
+		ADDED from /Users/leireibargutxi/Documents/GeoChat/app/src/main/AndroidManifest.xml:32:13-36
 	android:name
-		ADDED from /Users/leireibargutxi/Desktop/GeoChat/app/src/main/AndroidManifest.xml:30:13-37
+		ADDED from /Users/leireibargutxi/Documents/GeoChat/app/src/main/AndroidManifest.xml:30:13-37
 intent-filter#action:name:com.google.firebase.MESSAGING_EVENT
-ADDED from /Users/leireibargutxi/Desktop/GeoChat/app/src/main/AndroidManifest.xml:33:13-35:29
+ADDED from /Users/leireibargutxi/Documents/GeoChat/app/src/main/AndroidManifest.xml:33:13-35:29
 action#com.google.firebase.MESSAGING_EVENT
-ADDED from /Users/leireibargutxi/Desktop/GeoChat/app/src/main/AndroidManifest.xml:34:17-78
+ADDED from /Users/leireibargutxi/Documents/GeoChat/app/src/main/AndroidManifest.xml:34:17-78
 	android:name
-		ADDED from /Users/leireibargutxi/Desktop/GeoChat/app/src/main/AndroidManifest.xml:34:25-75
+		ADDED from /Users/leireibargutxi/Documents/GeoChat/app/src/main/AndroidManifest.xml:34:25-75
 meta-data#com.google.firebase.messaging.default_notification_channel_id
-ADDED from /Users/leireibargutxi/Desktop/GeoChat/app/src/main/AndroidManifest.xml:37:9-39:49
+ADDED from /Users/leireibargutxi/Documents/GeoChat/app/src/main/AndroidManifest.xml:37:9-39:49
 	android:value
-		ADDED from /Users/leireibargutxi/Desktop/GeoChat/app/src/main/AndroidManifest.xml:39:13-46
+		ADDED from /Users/leireibargutxi/Documents/GeoChat/app/src/main/AndroidManifest.xml:39:13-46
 	android:name
-		ADDED from /Users/leireibargutxi/Desktop/GeoChat/app/src/main/AndroidManifest.xml:38:13-89
+		ADDED from /Users/leireibargutxi/Documents/GeoChat/app/src/main/AndroidManifest.xml:38:13-89
 meta-data#com.google.android.geo.API_KEY
-ADDED from /Users/leireibargutxi/Desktop/GeoChat/app/src/main/AndroidManifest.xml:40:9-42:71
+ADDED from /Users/leireibargutxi/Documents/GeoChat/app/src/main/AndroidManifest.xml:40:9-42:71
 	android:value
-		ADDED from /Users/leireibargutxi/Desktop/GeoChat/app/src/main/AndroidManifest.xml:42:13-68
+		ADDED from /Users/leireibargutxi/Documents/GeoChat/app/src/main/AndroidManifest.xml:42:13-68
 	android:name
-		ADDED from /Users/leireibargutxi/Desktop/GeoChat/app/src/main/AndroidManifest.xml:41:13-58
+		ADDED from /Users/leireibargutxi/Documents/GeoChat/app/src/main/AndroidManifest.xml:41:13-58
 uses-sdk
-INJECTED from /Users/leireibargutxi/Desktop/GeoChat/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from /Users/leireibargutxi/Desktop/GeoChat/app/src/main/AndroidManifest.xml
-INJECTED from /Users/leireibargutxi/Desktop/GeoChat/app/src/main/AndroidManifest.xml
+INJECTED from /Users/leireibargutxi/Documents/GeoChat/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/leireibargutxi/Documents/GeoChat/app/src/main/AndroidManifest.xml
+INJECTED from /Users/leireibargutxi/Documents/GeoChat/app/src/main/AndroidManifest.xml
 MERGED from [com.android.support:multidex:1.0.3] /Users/leireibargutxi/.gradle/caches/transforms-2/files-2.1/2d56bec41c8f73ca3bf53d3defdf6df3/AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:multidex:1.0.3] /Users/leireibargutxi/.gradle/caches/transforms-2/files-2.1/2d56bec41c8f73ca3bf53d3defdf6df3/AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:design:28.0.0] /Users/leireibargutxi/.gradle/caches/transforms-2/files-2.1/c7d72043b9ae3a8ecbe742f764c6d721/AndroidManifest.xml:20:5-44
@@ -761,18 +761,18 @@ MERGED from [com.google.android.gms:play-services-wallet-license:12.0.1] /Users/
 MERGED from [com.google.android.gms:play-services-wallet-license:12.0.1] /Users/leireibargutxi/.gradle/caches/transforms-2/files-2.1/a3d7e79177529a79d305b12d796465c6/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-wearable-license:12.0.1] /Users/leireibargutxi/.gradle/caches/transforms-2/files-2.1/23b32390075f4ad44ca7ce296e49b747/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-wearable-license:12.0.1] /Users/leireibargutxi/.gradle/caches/transforms-2/files-2.1/23b32390075f4ad44ca7ce296e49b747/AndroidManifest.xml:20:5-44
-INJECTED from /Users/leireibargutxi/Desktop/GeoChat/app/src/main/AndroidManifest.xml
-INJECTED from /Users/leireibargutxi/Desktop/GeoChat/app/src/main/AndroidManifest.xml
+INJECTED from /Users/leireibargutxi/Documents/GeoChat/app/src/main/AndroidManifest.xml
+INJECTED from /Users/leireibargutxi/Documents/GeoChat/app/src/main/AndroidManifest.xml
 	tools:overrideLibrary
 		ADDED from [com.google.android.gms:play-services-ads:12.0.1] /Users/leireibargutxi/.gradle/caches/transforms-2/files-2.1/9e59a3b0f7ed7d57e0e33a95ca69a5a6/AndroidManifest.xml:23:9-59
 	android:targetSdkVersion
-		INJECTED from /Users/leireibargutxi/Desktop/GeoChat/app/src/main/AndroidManifest.xml
-		ADDED from /Users/leireibargutxi/Desktop/GeoChat/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/leireibargutxi/Desktop/GeoChat/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/leireibargutxi/Documents/GeoChat/app/src/main/AndroidManifest.xml
+		ADDED from /Users/leireibargutxi/Documents/GeoChat/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/leireibargutxi/Documents/GeoChat/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /Users/leireibargutxi/Desktop/GeoChat/app/src/main/AndroidManifest.xml
-		ADDED from /Users/leireibargutxi/Desktop/GeoChat/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/leireibargutxi/Desktop/GeoChat/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/leireibargutxi/Documents/GeoChat/app/src/main/AndroidManifest.xml
+		ADDED from /Users/leireibargutxi/Documents/GeoChat/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/leireibargutxi/Documents/GeoChat/app/src/main/AndroidManifest.xml
 receiver#com.google.android.gms.cast.framework.media.MediaIntentReceiver
 ADDED from [com.google.android.gms:play-services-cast-framework:12.0.1] /Users/leireibargutxi/.gradle/caches/transforms-2/files-2.1/12664447ae6fd706ad864e528c98208b/AndroidManifest.xml:8:9-100
 	android:name

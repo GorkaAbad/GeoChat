@@ -96,7 +96,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
                             LatLng bilbo = new LatLng(location.getLatitude(), location.getLongitude());
                             googleMap.addMarker(new MarkerOptions()
                                     .position(bilbo)
-                                    .title("Ubication"));
+                                    .title("Mi ubicación"));
                             //Acercar la camara a ese lugar
                             CameraPosition cameraPosition = CameraPosition.builder()
                                     .target(bilbo)
@@ -122,7 +122,6 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
                           public void run() {
                     String json =database.getLatLong();
                               JSONArray jsonArray = null;
-                              //ArrayList<UserLatLong> users= new ArrayList<UserLatLong>();
                               ArrayList<String> vistos= new ArrayList<String>();
                               try {
                                   jsonArray = new JSONArray(json);
@@ -132,8 +131,6 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
 
                                       jsonObject = jsonArray.getJSONObject(i);
 
-                                 // UserLatLong pd = new UserLatLong(jsonObject.getString("nick"), jsonObject.getDouble("lat"), jsonObject.getDouble("longitude"));
-
                                   if(!vistos.contains(jsonObject.getString("nick"))&&!jsonObject.getString("nick").equals(email)){
                                         vistos.add(jsonObject.getString("nick"));
                                         //users.add(pd);
@@ -141,7 +138,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
                                             LatLng latLng = new LatLng(jsonObject.getDouble("lat"),jsonObject.getDouble("longitude"));
                                             googleMap.addMarker(new MarkerOptions()
                                                     .position(latLng)
-                                                    .title("Click: " + latLng.toString())
+                                                    .title(jsonObject.getString("nick"))
                                                     .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN)));
 
                                         }
