@@ -4,31 +4,22 @@ class User {
     private String token;
     private String nick;
     private String name;
-    private String lat;
-    private String longitude;
+    private String password;
 
-    public String getLat() {
-        return lat;
-    }
-
-    public void setLat(String lat) {
-        this.lat = lat;
-    }
-
-    public String getLongitude() {
-        return longitude;
-    }
-
-    public void setLongitude(String longitude) {
-        this.longitude = longitude;
-    }
-
-    public User(String _nick, String _name, String _token, String _lat, String _longitude) {
+    public User(String _nick, String _name, String _token, String _pass){
         this.nick = _nick;
         this.name = _name;
         this.token = _token;
-        this.lat = _lat;
-        this.longitude = _longitude;
+        this.password = _pass;
+
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getToken() {

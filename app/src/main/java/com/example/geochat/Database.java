@@ -6,6 +6,8 @@ import android.os.AsyncTask;
 import android.support.annotation.Nullable;
 import android.util.Log;
 
+import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
@@ -16,6 +18,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.ProtocolException;
+import java.util.Arrays;
+import java.util.List;
 
 
 import javax.net.ssl.HttpsURLConnection;
@@ -66,6 +70,75 @@ public class Database extends AsyncTask<String, String, Void> {
     }
 
     /**
+     * Recger los tokens de un grupo
+     *
+     *
+     * @return
+     */
+    public String[] getTokens(){
+        String[] tokens =null;
+        HttpsURLConnection connection = getUrlConnection();
+        Uri.Builder builder = new Uri.Builder();
+
+
+        String result = hacerConexion(builder, connection);
+        try {
+
+            if (result.length()>0) {
+                JSONArray jsonArr = new JSONArray(result);
+                tokens=new String[jsonArr.length()];
+                for (int i = 0; i < jsonArr.length(); i++)
+                {
+                    org.json.JSONObject jsonObj = jsonArr.getJSONObject(i);
+                    tokens[i]=jsonObj.getString("token");
+                }
+            }
+
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return tokens;
+    }
+
+    /**
+     * Ver si el token de ahora esta ya registrado para ese usuario
+     * @parans nick
+     *
+     * @return
+     */
+    public boolean isTokenUser(String nick){
+        String[] tokens =null;
+        HttpsURLConnection connection = getUrlConnection();
+        Uri.Builder builder = new Uri.Builder().appendQueryParameter("nick",nick)
+                .appendQueryParameter("case", "3");
+        ;
+
+
+        String result = hacerConexion(builder, connection);
+        try {
+
+            if (result.length()>0) {
+                JSONArray jsonArr = new JSONArray(result);
+                tokens=new String[jsonArr.length()];
+                for (int i = 0; i < jsonArr.length(); i++)
+                {
+                    org.json.JSONObject jsonObj = jsonArr.getJSONObject(i);
+                    tokens[i]=jsonObj.getString("token");
+                }
+            }
+            List<String> list = Arrays.asList(tokens);
+            if(list.contains(firebase.getToken())){
+                return true;
+            }
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    /**
      * Inserta un usuario en la base de datos
      *
      * @param nick
@@ -90,13 +163,14 @@ public class Database extends AsyncTask<String, String, Void> {
         String result = hacerConexion(builder, connection);
         String status = "0";
         try {
+            Log.i("register", result);
             JSONParser parser = new JSONParser();
             JSONObject json = (JSONObject) parser.parse(result);
             status = (String) json.get("status");
 
             if (status.equals("1")) {
 
-                user = new User(nick, name, token);
+                user = new User(nick, name, token, password);
             }
 
         } catch (ParseException e) {
@@ -105,6 +179,56 @@ public class Database extends AsyncTask<String, String, Void> {
 
 
         return user;
+
+
+    }
+    /**
+     * Actualiza la longitud y la latitud de un usuario
+     *
+     * @param nick
+     * @param lat
+     * @param longitu
+     * @return
+     */
+    public void actualizarLatLong(String nick, double lat,double longitu) {
+
+
+        HttpsURLConnection connection = getUrlConnection();
+
+        User user = null;
+        Uri.Builder builder = new Uri.Builder()
+                .appendQueryParameter("nick", nick)
+                .appendQueryParameter("lat", String.valueOf(lat))
+                .appendQueryParameter("long", String.valueOf(longitu))
+                .appendQueryParameter("case", "0");
+
+
+        String result = hacerConexion(builder, connection);
+
+
+
+
+
+    }
+    /**
+     * Conseguir longitud y la latitud de los usuarios
+     *
+
+     * @return
+     */
+    public String getLatLong() {
+
+
+        HttpsURLConnection connection = getUrlConnection();
+
+        User user = null;
+        Uri.Builder builder = new Uri.Builder()
+                .appendQueryParameter("case", "1");
+
+
+        String result = hacerConexion(builder, connection);
+    return result;
+
 
 
     }
@@ -138,7 +262,7 @@ public class Database extends AsyncTask<String, String, Void> {
 
                 if (name != null) {
                     //Ususario correcto
-                    user = new User(nick, name, token);
+                    user = new User(nick, name, token, password);
                 }
             } else {
                 return null;
@@ -191,6 +315,7 @@ public class Database extends AsyncTask<String, String, Void> {
         String result = "";
         try {
             int statusCode = connection.getResponseCode();
+            Log.i("statusss","stat"+statusCode);
             if (statusCode == 200) {
                 BufferedInputStream inputStream = new BufferedInputStream(connection.getInputStream());
                 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream, "UTF-8"));
