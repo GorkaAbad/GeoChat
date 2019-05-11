@@ -18,6 +18,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.ProtocolException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -25,7 +26,7 @@ import java.util.List;
 import javax.net.ssl.HttpsURLConnection;
 
 
-public class Database extends AsyncTask<String, String, Void> {
+public class Database extends AsyncTask<String, String, ArrayList<Grupo>> {
     String direccion = "";
     Context context;
 
@@ -72,11 +73,10 @@ public class Database extends AsyncTask<String, String, Void> {
     /**
      * Recger los tokens de un grupo
      *
-     *
      * @return
      */
-    public String[] getTokens(){
-        String[] tokens =null;
+    public String[] getTokens() {
+        String[] tokens = null;
         HttpsURLConnection connection = getUrlConnection();
         Uri.Builder builder = new Uri.Builder();
 
@@ -84,13 +84,12 @@ public class Database extends AsyncTask<String, String, Void> {
         String result = hacerConexion(builder, connection);
         try {
 
-            if (result.length()>0) {
+            if (result.length() > 0) {
                 JSONArray jsonArr = new JSONArray(result);
-                tokens=new String[jsonArr.length()];
-                for (int i = 0; i < jsonArr.length(); i++)
-                {
+                tokens = new String[jsonArr.length()];
+                for (int i = 0; i < jsonArr.length(); i++) {
                     org.json.JSONObject jsonObj = jsonArr.getJSONObject(i);
-                    tokens[i]=jsonObj.getString("token");
+                    tokens[i] = jsonObj.getString("token");
                 }
             }
 
@@ -103,32 +102,30 @@ public class Database extends AsyncTask<String, String, Void> {
 
     /**
      * Ver si el token de ahora esta ya registrado para ese usuario
-     * @parans nick
      *
      * @return
+     * @parans nick
      */
-    public boolean isTokenUser(String nick){
-        String[] tokens =null;
+    public boolean isTokenUser(String nick) {
+        String[] tokens = null;
         HttpsURLConnection connection = getUrlConnection();
-        Uri.Builder builder = new Uri.Builder().appendQueryParameter("nick",nick)
+        Uri.Builder builder = new Uri.Builder().appendQueryParameter("nick", nick)
                 .appendQueryParameter("case", "3");
-        ;
 
 
         String result = hacerConexion(builder, connection);
         try {
 
-            if (result.length()>0) {
+            if (result.length() > 0) {
                 JSONArray jsonArr = new JSONArray(result);
-                tokens=new String[jsonArr.length()];
-                for (int i = 0; i < jsonArr.length(); i++)
-                {
+                tokens = new String[jsonArr.length()];
+                for (int i = 0; i < jsonArr.length(); i++) {
                     org.json.JSONObject jsonObj = jsonArr.getJSONObject(i);
-                    tokens[i]=jsonObj.getString("token");
+                    tokens[i] = jsonObj.getString("token");
                 }
             }
             List<String> list = Arrays.asList(tokens);
-            if(list.contains(firebase.getToken())){
+            if (list.contains(firebase.getToken())) {
                 return true;
             }
 
@@ -136,6 +133,51 @@ public class Database extends AsyncTask<String, String, Void> {
             e.printStackTrace();
         }
         return false;
+    }
+
+    public void anadirUsuarioAGrupo(String nick, String id) {
+        HttpsURLConnection connection = getUrlConnection();
+
+        Uri.Builder builder = new Uri.Builder().appendQueryParameter("nick", nick)
+                .appendQueryParameter("case", "0")
+                .appendQueryParameter("groupId", id);
+
+        hacerConexion(builder, connection);
+
+
+    }
+
+    public ArrayList<Grupo> getGrupos(String nick) {
+
+        ArrayList<Grupo> grupos = new ArrayList<>();
+        ArrayList<String> gruposTemp = null;
+        HttpsURLConnection connection = getUrlConnection();
+
+        Uri.Builder builder = new Uri.Builder().appendQueryParameter("nick", nick)
+                .appendQueryParameter("case", "3");
+
+
+        String result = hacerConexion(builder, connection);
+
+        Log.i("Resultado", result);
+        try {
+            JSONParser parser = new JSONParser();
+            JSONObject json = (JSONObject) parser.parse(result);
+            org.json.simple.JSONArray aux = (org.json.simple.JSONArray) json.get("grupos");
+
+
+            for (int i = 0; i < aux.size(); i++) {
+                org.json.simple.JSONObject auxObject = (JSONObject) aux.get(i);
+
+                grupos.add(new Grupo(auxObject.get("id").toString(), auxObject.get("name").toString(), null));
+            }
+
+        } catch (Exception e) {
+            Log.e("Exception", e.toString());
+        }
+
+        return grupos;
+
     }
 
     /**
@@ -182,6 +224,7 @@ public class Database extends AsyncTask<String, String, Void> {
 
 
     }
+
     /**
      * Actualiza la longitud y la latitud de un usuario
      *
@@ -190,7 +233,7 @@ public class Database extends AsyncTask<String, String, Void> {
      * @param longitu
      * @return
      */
-    public void actualizarLatLong(String nick, double lat,double longitu) {
+    public void actualizarLatLong(String nick, double lat, double longitu) {
 
 
         HttpsURLConnection connection = getUrlConnection();
@@ -206,14 +249,11 @@ public class Database extends AsyncTask<String, String, Void> {
         String result = hacerConexion(builder, connection);
 
 
-
-
-
     }
+
     /**
      * Conseguir longitud y la latitud de los usuarios
      *
-
      * @return
      */
     public String getLatLong() {
@@ -227,8 +267,7 @@ public class Database extends AsyncTask<String, String, Void> {
 
 
         String result = hacerConexion(builder, connection);
-    return result;
-
+        return result;
 
 
     }
@@ -315,7 +354,7 @@ public class Database extends AsyncTask<String, String, Void> {
         String result = "";
         try {
             int statusCode = connection.getResponseCode();
-            Log.i("statusss","stat"+statusCode);
+            Log.i("statusss", "stat" + statusCode);
             if (statusCode == 200) {
                 BufferedInputStream inputStream = new BufferedInputStream(connection.getInputStream());
                 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream, "UTF-8"));
@@ -336,16 +375,19 @@ public class Database extends AsyncTask<String, String, Void> {
     }
 
 
-
-
     @Override
-    protected Void doInBackground(String... strings) {
+    protected ArrayList<Grupo> doInBackground(String... strings) {
+        if (strings[0].equals("add")) {
+            anadirUsuarioAGrupo(strings[1], strings[2]);
+            return null;
+        } else {
+            return getGrupos(strings[0]);
+        }
 
-        return null;
     }
 
     @Override
-    protected void onPostExecute(Void fotos) {
-
+    protected void onPostExecute(ArrayList<Grupo> grupos) {
+        super.onPostExecute(grupos);
     }
 }

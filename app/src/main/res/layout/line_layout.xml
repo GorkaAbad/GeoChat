@@ -15,16 +15,16 @@
             android:layout_marginLeft="10dp"
             android:layout_marginTop="12dp"
             android:textSize="18sp"/>
+
         <ImageButton
             android:id="@+id/lineMap"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:layout_marginLeft="20dp"
             android:layout_alignRight="@id/lineText"
-            android:clickable="true"
+            android:layout_marginLeft="20dp"
             android:background="#00ffffff"
-            android:src="@android:drawable/btn_star"
-            />
+            android:clickable="true"
+            android:src="@android:drawable/ic_menu_add" />
     </LinearLayout>
 
 </RelativeLayout>

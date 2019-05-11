@@ -24,6 +24,8 @@ if ($case == 0) { //Añadir un usuario al grupo, y devolver los ususarios de ese
     getUsuariosDeGrupo($con, $GROUP_ID);
 } elseif ($case == 2) {//Crear un grupo
     crearGrupo($con, $GROUP_NAME);
+} elseif ($case == 3) {
+    getGruposDeUsuario($con, $USER_NICK);
 }
 
 mysqli_close($con);
@@ -31,9 +33,27 @@ mysqli_close($con);
 exit();
 
 
+function getGruposDeUsuario($con, $USER_NICK)
+{
+    $arrayresultados;
+
+    $resultado= mysqli_query($con, "SELECT grupo.id, grupo.name FROM grupo INNER JOIN userGroup WHERE userGroup.userNick = '$USER_NICK' AND userGroup.grupoId = grupo.id");
+    if (!$resultado) {
+        echo'Ha ocurrido algún error: '. mysqli_error($con);
+    } else {
+        //$arrayresultados = array('grupos' => $resultado);
+        while ($row = mysqli_fetch_assoc($resultado)) {
+            $test[] = $row;
+        }
+        $arrayresultados = array("grupos" => $test);
+        print json_encode($arrayresultados);
+    }
+}
+
+
 function anadirUsuarioAGrupo($con, $USER_NICK, $GROUP_ID)
 {
-    $resultado= mysqli_query($con, "INSERT INTO userGroup (userNick, groupoId) VALUES ('$USER_NICK', '$GROUP_ID')");
+    $resultado= mysqli_query($con, "INSERT INTO userGroup (userNick, grupoId) VALUES ('$USER_NICK', '$GROUP_ID')");
 
     $arrayresultados;
     if (!$resultado) {

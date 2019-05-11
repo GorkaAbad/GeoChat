@@ -3,21 +3,31 @@ package com.example.geochat;
 import java.util.ArrayList;
 
 class Grupo {
-    private int id;
+    private String id;
     private ArrayList<User> users;
+    private String name;
 
-    public Grupo(int _id, ArrayList<User> _users){
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Grupo(String _id, String _name, ArrayList<User> _users){
 
         this.id = _id;
         this.users = _users;
+        this.name = _name;
 
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 

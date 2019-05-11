@@ -16,7 +16,7 @@ public class Firebase extends FirebaseMessagingService {
 
     private static final String TAG = "firebase";
     final String direccion = "";
-    Database database = new Database(direccion, this, null);
+ //   Database database = new Database(direccion, this, null);
     private String token = "";
 
     public Firebase() {
