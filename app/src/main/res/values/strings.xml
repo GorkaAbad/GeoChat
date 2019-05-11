@@ -22,4 +22,7 @@ Email not found. You want to create a new user with that email and password?
     <string name="title_activity_main">MainActivity</string>
     <string name="appwidget_text">0</string>
     <string name="add_widget">Add widget</string>
+    <string name="add_group">Add Group</string>
+    <string name="signout">Sign Out</string>
+    <string name="share_nick">Send nick</string>
 </resources>

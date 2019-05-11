@@ -1,6 +1,7 @@
 package com.example.geochat;
 
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -46,6 +47,8 @@ public class AdaptadorListView extends BaseAdapter {
             @Override
             public void onClick(View v) {
                 Log.i("Map", Integer.toString(grupos.get(position).getId()));
+                Intent display=new Intent(context, LoginActivity.class);
+                context.startActivity(display);
             }
         });
 

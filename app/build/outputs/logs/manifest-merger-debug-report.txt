@@ -426,7 +426,7 @@ MERGED from [com.google.android.gms:play-services-wearable-license:12.0.1] /home
 	android:allowBackup
 		ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:11:9-35
 	android:theme
-		ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:16:9-40
+		ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:16:9-68
 activity#com.example.geochat.GroupActivity
 ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:17:9-60
 	android:name
