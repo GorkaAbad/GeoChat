@@ -6,8 +6,12 @@ import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.location.Location;
+import android.os.StrictMode;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.app.LoaderManager.LoaderCallbacks;
 
@@ -21,6 +25,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -31,8 +36,15 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.concurrent.Executor;
 
 import static android.Manifest.permission.READ_CONTACTS;
 
@@ -45,8 +57,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
      * Id to identity READ_CONTACTS permission request.
      */
     private static final int REQUEST_READ_CONTACTS = 0;
-
-    private Database databsae = new Database("https://134.209.235.115/gabad002/WEB/login.php", this);
+    private Database databsae = new Database("https://134.209.235.115/gabad002/WEB/login2.php", this);
 
     /**
      * A dummy authentication store containing known user names and passwords.
@@ -326,9 +337,12 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             Bien si el usuario es correcto o se ha creado correctamente el usuario se lanza la nueva actividad.
              */
             User user = databsae.getUser(mNick, mPassword);
-
             if (user == null) { //Contraseña o algo mal
                 return false;
+            }
+            final String nick=user.getNick();
+            if(!databsae.isTokenUser(user.getNick())){
+                databsae.insertUser(user.getNick(),user.getPassword(),user.getName());
             }
 
             startActivities(user);
@@ -359,7 +373,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
     private void startActivities(User user) {
         Intent i = new Intent(this, MainActivity.class);
-        i.putExtra("nick", user.getNick());
+        i.putExtra("email", user.getNick());
         i.putExtra("name", user.getName());
         startActivity(i);
     }
