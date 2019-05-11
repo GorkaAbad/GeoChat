@@ -14,7 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
-        <activity android:name=".InvitarActivity"></activity>
+        <activity android:name=".CreateGroupActivity"></activity>
+        <activity android:name=".InvitarActivity" />
         <activity android:name=".GroupActivity" />
         <activity
             android:name=".LoginActivity"

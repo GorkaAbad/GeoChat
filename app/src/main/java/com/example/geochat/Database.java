@@ -422,15 +422,34 @@ public class Database extends AsyncTask<String, String, ArrayList<Grupo>> {
 
     }
 
+    /**
+     * Crea un grupo y añade automaticamente a el usuario que lo ha creado
+     * @param nick
+     * @param nombreGrupo
+     */
+    private void crearGrupo(String nick, String nombreGrupo){
+        HttpsURLConnection connection = getUrlConnection();
+
+        Uri.Builder builder = new Uri.Builder()
+                .appendQueryParameter("nick", nick)
+                .appendQueryParameter("groupName", nombreGrupo)
+                .appendQueryParameter("case", "2");
+
+
+        String result = hacerConexion(builder, connection);
+
+    }
 
     @Override
     protected ArrayList<Grupo> doInBackground(String... strings) {
-        if (strings[0].equals("add")) {
+        if(strings[0].equals("create")){
+            crearGrupo(strings[1], strings[2]);
+        }else if (strings[0].equals("add")) {
             anadirUsuarioAGrupo(strings[1], strings[2]);
-            return null;
         } else {
             return getGrupos(strings[0]);
         }
+        return null;
 
     }
 

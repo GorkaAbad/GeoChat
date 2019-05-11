@@ -23,7 +23,7 @@ if ($case == 0) { //Añadir un usuario al grupo, y devolver los ususarios de ese
 } elseif ($case == 1) { //Conseguir los usuarios de un grupo
     getUsuariosDeGrupo($con, $GROUP_ID);
 } elseif ($case == 2) {//Crear un grupo
-    crearGrupo($con, $GROUP_NAME);
+    crearGrupo($con, $GROUP_NAME, $USER_NICK);
 } elseif ($case == 3) {
     getGruposDeUsuario($con, $USER_NICK);
 }
@@ -83,9 +83,13 @@ function getUsuariosDeGrupo($con, $GROUP_ID)
     echo json_encode($arrayresultados);
 }
 
-function crearGrupo($con, $GROUP_NAME)
+function crearGrupo($con, $GROUP_NAME, $USER_NICK)
 {
     $resultado= mysqli_query($con, "INSERT INTO grupo (name) VALUES ('$GROUP_NAME')");
+
+    $idGrupo = $con->insert_id;
+
+    anadirUsuarioAGrupo($con, $USER_NICK, $idGrupo);
 
     $arrayresultados;
     if (!$resultado) {
