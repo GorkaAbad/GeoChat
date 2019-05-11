@@ -9,12 +9,12 @@ public class ChatMessage {
     private String messageUser;
     private String messageTime;
 
-    public ChatMessage(String messageText, String messageUser) {
+    public ChatMessage(String messageText, String messageUser, String fecha) {
         this.messageText = messageText;
         this.messageUser = messageUser;
 
         // Inizializar a hora actual
-        messageTime = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
+        messageTime = fecha;
         ;
     }
 

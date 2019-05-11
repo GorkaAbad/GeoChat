@@ -48,6 +48,7 @@ public class GroupActivity extends AppCompatActivity {
                 Intent i = new Intent(getApplicationContext(), MainActivity.class);
                 i.putExtra("name", grupos.get(position).getName());
                 i.putExtra("id", grupos.get(position).getId());
+                i.putExtra("email",nick);
                 startActivity(i);
             }
         });

@@ -18,8 +18,10 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.ProtocolException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 
 
@@ -75,10 +77,11 @@ public class Database extends AsyncTask<String, String, ArrayList<Grupo>> {
      *
      * @return
      */
-    public String[] getTokens() {
+    public String[] getTokens(String id) {
         String[] tokens = null;
         HttpsURLConnection connection = getUrlConnection();
-        Uri.Builder builder = new Uri.Builder();
+        Uri.Builder builder = new Uri.Builder().appendQueryParameter("group",id)
+                .appendQueryParameter("case","2");
 
 
         String result = hacerConexion(builder, connection);
@@ -233,7 +236,7 @@ public class Database extends AsyncTask<String, String, ArrayList<Grupo>> {
      * @param longitu
      * @return
      */
-    public void actualizarLatLong(String nick, double lat, double longitu) {
+    public void actualizarLatLong(String nick, String lat, String longitu) {
 
 
         HttpsURLConnection connection = getUrlConnection();
@@ -241,8 +244,8 @@ public class Database extends AsyncTask<String, String, ArrayList<Grupo>> {
         User user = null;
         Uri.Builder builder = new Uri.Builder()
                 .appendQueryParameter("nick", nick)
-                .appendQueryParameter("lat", String.valueOf(lat))
-                .appendQueryParameter("long", String.valueOf(longitu))
+                .appendQueryParameter("lat", lat)
+                .appendQueryParameter("long", longitu)
                 .appendQueryParameter("case", "0");
 
 
@@ -252,17 +255,40 @@ public class Database extends AsyncTask<String, String, ArrayList<Grupo>> {
     }
 
     /**
-     * Conseguir longitud y la latitud de los usuarios
+     * Conseguir longitud y la latitud de los usuarios, por grupo
      *
      * @return
      */
-    public String getLatLong() {
+    public String getLatLong(String grupo) {
 
 
         HttpsURLConnection connection = getUrlConnection();
 
         User user = null;
         Uri.Builder builder = new Uri.Builder()
+                .appendQueryParameter("group",grupo)
+                .appendQueryParameter("case", "1");
+
+
+        String result = hacerConexion(builder, connection);
+        Log.i("result", result);
+        return result;
+
+
+    }
+    /**
+     * Conseguir mensaje de un grpo
+     *
+     * @return
+     */
+    public String getMessages(String id) {
+
+
+        HttpsURLConnection connection = getUrlConnection();
+
+        User user = null;
+        Uri.Builder builder = new Uri.Builder()
+                .appendQueryParameter("group", id)
                 .appendQueryParameter("case", "1");
 
 
@@ -313,6 +339,28 @@ public class Database extends AsyncTask<String, String, ArrayList<Grupo>> {
         }
 
         return user;
+
+    }
+    /**
+     * Insertar mensaje.
+     *
+     *
+     * @return
+     */
+    public void insertarMensaje(String nick, String mensaje, String grupoId) {
+        HttpsURLConnection connection = getUrlConnection();
+        String date =new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
+        Uri.Builder builder = new Uri.Builder()
+                .appendQueryParameter("user", nick)
+                .appendQueryParameter("mensaje", mensaje)
+                .appendQueryParameter("group",grupoId)
+                .appendQueryParameter("fecha", date)
+                .appendQueryParameter("case", "0");
+
+
+        String result = hacerConexion(builder, connection);
+
+
 
     }
 

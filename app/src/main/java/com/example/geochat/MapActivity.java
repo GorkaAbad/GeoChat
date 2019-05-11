@@ -10,6 +10,7 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
+import android.util.Log;
 import android.widget.CompoundButton;
 import android.widget.Switch;
 
@@ -36,6 +37,7 @@ import java.util.ArrayList;
 
 public class MapActivity extends FragmentActivity implements OnMapReadyCallback {
     static String email ;
+    static String id;
     private FusedLocationProviderClient mFusedLocationClient;
     private Database database = new Database("https://134.209.235.115/gabad002/WEB/mapaDB.php", this,null);
 
@@ -46,6 +48,9 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
         if (extras != null) {
             if (getIntent().hasExtra("email")) {
                 email = extras.getString("email");
+            }
+            if (getIntent().hasExtra("id")) {
+                id = extras.getString("id");
             }
         }
         //Creación Alert Dialog
@@ -149,7 +154,8 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
         runOnUiThread(new Runnable() {
                           @Override
                           public void run() {
-                    String json =database.getLatLong();
+                    String json =database.getLatLong(id);
+                    Log.i("MAPA", json);
                               JSONArray jsonArray = null;
                               ArrayList<String> vistos= new ArrayList<String>();
                               try {

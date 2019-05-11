@@ -3,6 +3,7 @@ package com.example.geochat;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.StrictMode;
+import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -11,7 +12,9 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.TextView;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,9 +22,11 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
     String data;
     static String email ;
-    static final List<ChatMessage> listViewItems = new ArrayList<ChatMessage>();
-    private Database database = new Database("https://134.209.235.115/gabad002/WEB/getToken.php", this,null);
+     String messagesJson;
+    final List<ChatMessage> lista= new ArrayList<>();
+    private Database database = new Database("https://134.209.235.115/gabad002/WEB/chatMessages.php", this,null);
 
+    private String id;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +39,10 @@ public class MainActivity extends AppCompatActivity {
         ListView listOfMessages = findViewById(R.id.list_of_messages);
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
+            if (getIntent().hasExtra("id")) {
+                id= extras.getString("id");
+                this.cargarMensajes();
+            }
             if(getIntent().hasExtra("email")) {
                 email = extras.getString("email");
             }else if (getIntent().hasExtra("data")) {
@@ -42,12 +51,17 @@ public class MainActivity extends AppCompatActivity {
                 }
                 data = extras.getString("data");
                 String[] parts = data.split("--user--");
+                String[] parts2 = parts[1].split("--group--");
+                id=parts2[0];
 
-                listViewItems.add(new ChatMessage(parts[1],parts[0]));
+                this.cargarMensajes();
+
             }
+
+
         }
         //Crear el adapter para la lista de mensajes
-        ListAdapter listAdapter = new ListAdapter(this, listViewItems);
+        ListAdapter listAdapter = new ListAdapter(this, lista);
         listOfMessages.setAdapter(listAdapter);
 
         FloatingActionButton fab =
@@ -66,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 EditText input = findViewById(R.id.input);
-                String data = input.getText().toString();
+                final String data = input.getText().toString();
                 if (data == null||data.isEmpty()) {
 
                     //lanzar un alert dialog diciendo que el mensaje estan vacios. (dialogo1)
@@ -80,8 +94,9 @@ public class MainActivity extends AppCompatActivity {
                         runOnUiThread(new Runnable() {
                                           @Override
                                           public void run() {
-                                              //Conseguir los tokens de todas las personas que se han subscrito a la aplicacion
-                                              token[0] = database.getTokens();
+                                              //Conseguir los tokens de todas las personas del grupo
+                                              token[0] = database.getTokens(id);
+                                              database.insertarMensaje(email,data,id);
                                           }
                                       });
                         //Un token puede estar asigando a mas de un usuario, entonces no queremos enviar mas de una vez el mensaje al mismo dispositivo.
@@ -92,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
                                 if (token[0][i] != null&&!vistos.contains(token[0][i])) {
                                     vistos.add(token[0][i]);
                                     Log.i("MENSAJE",data);
-                                    new firebasePost(MainActivity.this).execute(token[0][i], email+"--user--"+data);
+                                    new firebasePost(MainActivity.this).execute(token[0][i], email+"--user--"+id+"--group--"+data);
                                 }
                             }
 
@@ -103,6 +118,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                     // Limpiar el input
                     input.setText("");
+                    finish();
                 }
             }
         });
@@ -118,8 +134,45 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 i2.putExtra("email",email);
+                i2.putExtra("id",id);
                 startActivity(i2);
             }
         });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        this.cargarMensajes();
+    }
+
+    private void cargarMensajes(){
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy);
+        final String[][] token = {null};
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+
+                messagesJson= database.getMessages(id);
+                Log.i("JSON", messagesJson);
+            }
+        });
+
+
+        JSONArray jsonArray = null;
+        ArrayList<String> vistos= new ArrayList<String>();
+        try {
+            jsonArray = new JSONArray(messagesJson);
+
+            for (int i = 0; i < jsonArray.length(); i++) {
+                JSONObject jsonObject = null;
+
+                jsonObject = jsonArray.getJSONObject(i);
+                lista.add(new ChatMessage(jsonObject.getString("mensaje"), jsonObject.getString("user"), jsonObject.getString("fecha")));
+            }
+        }catch (Exception e){
+
+        }
     }
 }
