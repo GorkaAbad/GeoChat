@@ -10,6 +10,8 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
+import android.widget.CompoundButton;
+import android.widget.Switch;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
@@ -66,7 +68,30 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
 
     @Override
     public void onMapReady(final GoogleMap googleMap) {
-
+        final boolean[] ubicacion = {true};
+        final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.cancel();
+            }
+        });
+        builder.setMessage("Has dejado de compartir ubicación.");
+        final AlertDialog alert = builder.create();
+        Switch swi = (Switch) findViewById(R.id.simpleSwitch);
+        swi.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener()
+        {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) //Line A
+            {
+                if(isChecked==false){
+                    ubicacion[0] =false;
+                    database.actualizarLatLong(email, null,null);
+                    alert.show();
+                }else {
+                    ubicacion[0] = true;
+                }
+            }
+        });
         //Conseguir ubicacion actual(GEOLOCALIZACION)
          mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
          //Mirar si tiene permisos para obtener la ubicación
@@ -89,7 +114,11 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
                                 @Override
                                 public void run() {
                                     //Conseguir los tokens de todas las personas que se han subscrito a la aplicacion
-                                     database.actualizarLatLong(email,location.getLatitude(),location.getLongitude());
+                                    if(ubicacion[0]==true) {
+                                        database.actualizarLatLong(email, String.valueOf(location.getLatitude()), String.valueOf(location.getLongitude()));
+                                    }else{
+                                        database.actualizarLatLong(email, null,null);
+                                    }
                                 }
                             });
                             //crear un marcador donde se indica tu ubicación
@@ -134,7 +163,8 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
                                   if(!vistos.contains(jsonObject.getString("nick"))&&!jsonObject.getString("nick").equals(email)){
                                         vistos.add(jsonObject.getString("nick"));
                                         //users.add(pd);
-                                        if(!jsonObject.getString("lat").equals(null)&&!jsonObject.getString("longitude").equals(null)) {
+                                        if((!jsonObject.getString("lat").equals(null)&&!jsonObject.getString("longitude").equals(null))
+                                        ||(jsonObject.getDouble("lat")!=0&&jsonObject.getDouble("longitude")!=0)) {
                                             LatLng latLng = new LatLng(jsonObject.getDouble("lat"),jsonObject.getDouble("longitude"));
                                             googleMap.addMarker(new MarkerOptions()
                                                     .position(latLng)
