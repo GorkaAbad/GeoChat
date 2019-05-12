@@ -1,8 +1,10 @@
 package com.example.geochat;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.support.annotation.NonNull;
@@ -83,7 +85,10 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
             }
         });
         builder.setMessage("Has dejado de compartir ubicación.");
+        final Intent stopservice = new Intent(this, GeoService.class);
         final AlertDialog alert = builder.create();
+        final Intent geointent = new Intent(this, GeoService.class);
+        geointent.putExtra("nick", email);
         Switch swi = (Switch) findViewById(R.id.simpleSwitch);
         swi.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener()
         {
@@ -93,7 +98,13 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
                     ubicacion[0] =false;
                     database.actualizarLatLong(email, null,null);
                     alert.show();
+                    stopService(stopservice);
                 }else {
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                        startForegroundService(geointent);
+                    } else {
+                        startService(geointent);
+                    }
                     ubicacion[0] = true;
                 }
             }
