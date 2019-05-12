@@ -79,6 +79,7 @@ public class Firebase extends FirebaseMessagingService {
         //Llama a la actividad principal enviandole el mensaje recibido
         Intent intent = new Intent(this, MainActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         intent.putExtra("data", body);
 
         startActivity(intent);
