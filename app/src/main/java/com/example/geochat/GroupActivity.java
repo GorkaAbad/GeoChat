@@ -156,6 +156,7 @@ public class GroupActivity extends AppCompatActivity {
             Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
             startActivity(intent);
             finish();
+            MainActivity.email=null;
         } else if (id == R.id.share_nick) {
             Intent sendIntent = new Intent();
             sendIntent.setAction(Intent.ACTION_SEND);

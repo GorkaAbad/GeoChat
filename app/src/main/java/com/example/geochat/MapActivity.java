@@ -188,18 +188,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
                               }
                           }
                       });
-        //Mirar si ha clickado en el marcador de ubicación
-        googleMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
-            public boolean onMarkerClick(Marker marker) {
-                if (marker != null) {
-                    if(marker.getTitle().equalsIgnoreCase("Mi ubicación") ){
-                        enviarMensaje(marker.getPosition(), "me");
-                    }
-                }
 
-                return false;
-            }
-        });
 
     }
     @Override
@@ -211,36 +200,5 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
         }
         return super.onKeyDown(keyCode, event);
     }
-private void enviarMensaje(LatLng latLng,String type){
-       /* if(latLng!=null&&!type.isEmpty()) {
-            String data;
-
-            if (type.equalsIgnoreCase("go")) {
-                data = email+"--user--Quiero ir  " + latLng.toString();
-            } else {
-                data = email+"--user--Estoy en " + latLng.toString();
-            }
-            try {
-                //Conseguir los tokens de todas las personas que se han subscrito a la aplicacion
-                String[] token = new conexionDB(MapActivity.this).execute("gettoken").get();
-                //Un token puede estar asigando a mas de un usuario, entonces no queremos enviar mas de una vez el mensaje al mismo dispositivo.
-                ArrayList<String> vistos = new ArrayList<>();
-                if (token.length > 0) {
-                    //Por cada token enviar el mensaje
-                    for (int i = 0; i < token.length; i++) {
-                        if (token[i] != null && !vistos.contains(token[i])) {
-                            vistos.add(token[i]);
-                            new firebasePost(MapActivity.this).execute(token[i], data);
-                        }
-                    }
-
-                }
-            } catch (Exception e) {
-
-
-            }
-        }
-        */
-}
 
 }

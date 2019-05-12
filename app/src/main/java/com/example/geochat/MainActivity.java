@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     private Database database = new Database("https://134.209.235.115/gabad002/WEB/chatMessages.php", this,null);
     private String id;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
