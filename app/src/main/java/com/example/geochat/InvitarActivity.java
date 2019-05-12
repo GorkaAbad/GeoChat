@@ -33,7 +33,8 @@ public class InvitarActivity extends AppCompatActivity {
 
                 database.execute("add", texto, id);
 
-                Toast.makeText(getApplicationContext(), "User added to group", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), getResources().getString(R.string.add_usertogroup), Toast.LENGTH_LONG).show();
+                finish();
 
 
             }

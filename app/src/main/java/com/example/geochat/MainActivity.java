@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
                 dialog.cancel();
             }
         });
-        builder.setMessage("Inserte un mensaje");
+        builder.setMessage(getResources().getString(R.string.insert_message));
 
         fab.setOnClickListener(new View.OnClickListener() {
             @Override

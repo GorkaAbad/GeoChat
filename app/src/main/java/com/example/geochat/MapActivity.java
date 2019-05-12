@@ -61,7 +61,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
                 dialog.cancel();
             }
         });
-        builder.setMessage("Aqui aparecen las ubicaciones de la gente de tu grupo");
+        builder.setMessage(getResources().getString(R.string.show_locations));
         final AlertDialog alert = builder.create();
         alert.show();
         SupportMapFragment elfragmento =

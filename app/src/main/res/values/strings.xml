@@ -11,7 +11,7 @@
     <string name="error_incorrect_password">This password is incorrect</string>
     <string name="error_field_required">This field is required</string>
     <string name="name">Name</string>
-    <string name="permission_rationale">
+    <string name="permission_rationale" translatable="false">
 "Contacts permissions are needed for providing email completions."
 </string>
     <string name="confirm_registry">
@@ -19,10 +19,15 @@ Email not found. You want to create a new user with that email and password?
 </string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
-    <string name="title_activity_main">MainActivity</string>
-    <string name="appwidget_text">0</string>
+    <string name="title_activity_main" translatable="false">MainActivity</string>
+    <string name="appwidget_text" translatable="false">0</string>
     <string name="add_widget">Add widget</string>
     <string name="add_group">Add Group</string>
     <string name="signout">Sign Out</string>
     <string name="share_nick">Send nick</string>
+    <string name="add_usertogroup">User added to group</string>
+    <string name="send_nick">This is my nick</string>
+    <string name="group_succes">Group created successfully</string>
+    <string name="show_locations">Locations of the people in your group</string>
+    <string name="insert_message">Insert a message</string>
 </resources>

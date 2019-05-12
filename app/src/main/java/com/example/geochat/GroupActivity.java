@@ -136,10 +136,11 @@ public class GroupActivity extends AppCompatActivity {
             stopService(stopservice);
             Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
             startActivity(intent);
+            finish();
         } else if (id == R.id.share_nick) {
             Intent sendIntent = new Intent();
             sendIntent.setAction(Intent.ACTION_SEND);
-            sendIntent.putExtra(Intent.EXTRA_TEXT, "Este es mi nick: " + nick);
+            sendIntent.putExtra(Intent.EXTRA_TEXT, getResources().getString(R.string.send_nick)+" " + nick);
             sendIntent.setType("text/plain");
             startActivity(sendIntent);
         }
