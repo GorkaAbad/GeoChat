@@ -57,8 +57,8 @@ public class GroupActivity extends AppCompatActivity {
                     if (location != null) {
                         latitud = String.valueOf(location.getLatitude());
                         longitud = String.valueOf(location.getLongitude());
-                        //Database database = new Database("https://134.209.235.115/gabad002/WEB/mapaDB.php", GroupActivity.this, null);
-                        //database.actualizarLatLong(nick, String.valueOf(location.getLatitude()), String.valueOf(location.getLongitude()));
+                        Database database = new Database("https://134.209.235.115/gabad002/WEB/mapaDB.php", GroupActivity.this, null);
+                        database.actualizarLatLong(nick, String.valueOf(location.getLatitude()), String.valueOf(location.getLongitude()));
                         Log.d("HOLA","OnSuccess "+latitud+" "+longitud);
                     } else {
                         latitud = null;
