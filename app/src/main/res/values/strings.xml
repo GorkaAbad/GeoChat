@@ -30,4 +30,7 @@ Email not found. You want to create a new user with that email and password?
     <string name="group_succes">Group created successfully</string>
     <string name="show_locations">Locations of the people in your group</string>
     <string name="insert_message">Insert a message</string>
+    <string name="delete">Delete?</string>
+    <string name="sure_delete">Are you sure you want to delete</string>
+    <string name="cancel">Cancel</string>
 </resources>

@@ -440,10 +440,23 @@ public class Database extends AsyncTask<String, String, ArrayList<Grupo>> {
 
     }
 
+    private void borrarUserDeGrupo(String nick, String id){
+        HttpsURLConnection connection = getUrlConnection();
+
+        Uri.Builder builder = new Uri.Builder()
+                .appendQueryParameter("nick", nick)
+                .appendQueryParameter("groupId",id)
+                .appendQueryParameter("case", "4");
+
+
+        String result = hacerConexion(builder, connection);
+    }
+
     @Override
     protected ArrayList<Grupo> doInBackground(String... strings) {
-        if(strings[0].equals("update")){
-            Log.d("MAPA","SERVICIO");
+        if(strings[0].equals("delete")){
+            borrarUserDeGrupo(strings[1], strings[2]);
+        }else if(strings[0].equals("update")){
             actualizarLatLong(strings[1],strings[2],strings[3]);
         }else if(strings[0].equals("create")){
             crearGrupo(strings[1], strings[2]);

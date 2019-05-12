@@ -26,13 +26,27 @@ if ($case == 0) { //Añadir un usuario al grupo, y devolver los ususarios de ese
     crearGrupo($con, $GROUP_NAME, $USER_NICK);
 } elseif ($case == 3) {
     getGruposDeUsuario($con, $USER_NICK);
+}elseif ($case == 4) {
+    borrarUserDeGrupo($con, $GROUP_ID, $USER_NICK);
 }
 
 mysqli_close($con);
 
 exit();
 
+function borrarUserDeGrupo($con, $GROUP_ID, $USER_NICK){
+   $resultado= mysqli_query($con, "DELETE FROM userGroup WHERE userNick = '$USER_NICK' AND grupoId = '$GROUP_ID'");
+  $arrayresultados;
+    if (!$resultado) {
+        echo'Ha ocurrido algún error: '. mysqli_error($con);
+        $arrayresultados = array('status' => '0');
+    } else {
+        $arrayresultados = array('status' => '1');
+    }
 
+    echo json_encode($arrayresultados);
+
+}
 function getGruposDeUsuario($con, $USER_NICK)
 {
     $arrayresultados;

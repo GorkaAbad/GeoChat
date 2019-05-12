@@ -23,4 +23,7 @@
     <string name="yes">Si</string>
     <string name="confirm_registry">Email incorrecto. Quieres crear un usuario con ese email y contraseña?</string>
     <string name="insert_message">Inserte un mensaje</string>
+    <string name="delete">Eliminar?</string>
+    <string name="sure_delete">Estas seguro de que lo quieres eliminar</string>
+    <string name="cancel">Cancelar</string>
 </resources>

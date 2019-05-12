@@ -1,6 +1,7 @@
 package com.example.geochat;
 
 import android.Manifest;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
@@ -9,6 +10,7 @@ import android.os.Build;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -40,17 +42,17 @@ public class GroupActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_group);
         this.initialize();
-        Intent geointent = new Intent(this,GeoService.class);
-        geointent.putExtra("nick",nick);
-        if(Build.VERSION.SDK_INT>= Build.VERSION_CODES.O) {
+        Intent geointent = new Intent(this, GeoService.class);
+        geointent.putExtra("nick", nick);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             startForegroundService(geointent);
-        } else{
+        } else {
             startService(geointent);
         }
         FusedLocationProviderClient mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION},1);
-        }else{
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 1);
+        } else {
             mFusedLocationClient.getLastLocation().addOnSuccessListener(this, new OnSuccessListener<Location>() {
                 @Override
                 public void onSuccess(Location location) {
@@ -58,12 +60,10 @@ public class GroupActivity extends AppCompatActivity {
                         latitud = String.valueOf(location.getLatitude());
                         longitud = String.valueOf(location.getLongitude());
                         Database database = new Database("https://134.209.235.115/gabad002/WEB/mapaDB.php", GroupActivity.this, null);
-                        database.actualizarLatLong(nick, String.valueOf(location.getLatitude()), String.valueOf(location.getLongitude()));
-                        Log.d("HOLA","OnSuccess "+latitud+" "+longitud);
+                        database.execute("update", nick, String.valueOf(location.getLatitude()), String.valueOf(location.getLongitude()));
                     } else {
                         latitud = null;
                         longitud = null;
-                        Log.d("HOLA","OnSuccessFAIL "+latitud+" "+longitud);
                     }
 
                 }
@@ -85,8 +85,7 @@ public class GroupActivity extends AppCompatActivity {
             nick = intent.getStringExtra("nick");
         }
 
-        //AsyncTask<String, String, ArrayList<Grupo>> a = database.execute(nick);
-        Database database = new Database("https://134.209.235.115/gabad002/WEB/group.php", this, null);
+        final Database database = new Database("https://134.209.235.115/gabad002/WEB/group.php", this, null);
         try {
             grupos = database.execute(nick).get();
         } catch (ExecutionException e) {
@@ -97,9 +96,29 @@ public class GroupActivity extends AppCompatActivity {
 
         ListView listGrupo = findViewById(R.id.list);
 
-        AdaptadorListView adap = new AdaptadorListView(getApplicationContext(), grupos);
+        final AdaptadorListView adap = new AdaptadorListView(getApplicationContext(), grupos);
         listGrupo.setAdapter(adap);
 
+        listGrupo.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> arg0, View arg1,
+                                           final int pos, long id) {
+                AlertDialog.Builder adb = new AlertDialog.Builder(GroupActivity.this);
+                adb.setTitle(getString(R.string.delete));
+                adb.setMessage(getString(R.string.sure_delete) + grupos.get(pos).getName());
+                adb.setNegativeButton(getString(R.string.cancel), null);
+                adb.setPositiveButton("Ok", new AlertDialog.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        final Database database = new Database("https://134.209.235.115/gabad002/WEB/group.php", GroupActivity.this, null);
+                        database.execute("delete", nick, grupos.get(pos).getId());
+                        adap.notifyDataSetChanged();
+                    }
+                });
+                adb.show();
+
+                return true;
+            }
+        });
         listGrupo.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -132,7 +151,7 @@ public class GroupActivity extends AppCompatActivity {
             intent.putExtra("nick", nick);
             startActivity(intent);
         } else if (id == R.id.signout) {
-            Intent stopservice= new Intent(this, GeoService.class);
+            Intent stopservice = new Intent(this, GeoService.class);
             stopService(stopservice);
             Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
             startActivity(intent);
@@ -140,12 +159,17 @@ public class GroupActivity extends AppCompatActivity {
         } else if (id == R.id.share_nick) {
             Intent sendIntent = new Intent();
             sendIntent.setAction(Intent.ACTION_SEND);
-            sendIntent.putExtra(Intent.EXTRA_TEXT, getResources().getString(R.string.send_nick)+" " + nick);
+            sendIntent.putExtra(Intent.EXTRA_TEXT, getResources().getString(R.string.send_nick) + " " + nick);
             sendIntent.setType("text/plain");
             startActivity(sendIntent);
         }
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        initialize();
 
+    }
 }
