@@ -19,15 +19,15 @@ import java.util.concurrent.ExecutionException;
 public class GroupActivity extends AppCompatActivity {
     private ArrayList<Grupo> grupos;
     String nick;
-    Database database = new Database("https://134.209.235.115/gabad002/WEB/group.php", this, null);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_group);
+        this.initialize();
     }
 
-    private void inicialize() {
+    private void initialize() {
         Toolbar bar = findViewById(R.id.bar);
         setSupportActionBar(bar);
         Intent intent = getIntent();
@@ -35,10 +35,10 @@ public class GroupActivity extends AppCompatActivity {
             nick = intent.getStringExtra("nick");
         }
 
-        AsyncTask<String, String, ArrayList<Grupo>> a = database.execute(nick);
-
+        //AsyncTask<String, String, ArrayList<Grupo>> a = database.execute(nick);
+        Database database = new Database("https://134.209.235.115/gabad002/WEB/group.php", this, null);
         try {
-            grupos = a.get();
+            grupos = database.execute(nick).get();
         } catch (ExecutionException e) {
             e.printStackTrace();
         } catch (InterruptedException e) {
@@ -60,6 +60,12 @@ public class GroupActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        this.initialize();
     }
 
     @Override

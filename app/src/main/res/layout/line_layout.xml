@@ -21,7 +21,7 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_alignRight="@id/lineText"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="80dp"
             android:background="#00ffffff"
             android:clickable="true"
             android:src="@android:drawable/ic_menu_add" />

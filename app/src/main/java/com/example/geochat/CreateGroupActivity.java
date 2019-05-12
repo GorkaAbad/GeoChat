@@ -33,6 +33,8 @@ public class CreateGroupActivity extends AppCompatActivity {
 
                 database.execute("create", nick, String.valueOf(nombre.getText()));
                 Toast.makeText(getApplicationContext(), "Group "+ nombre.getText() + "created successfully", Toast.LENGTH_LONG).show();
+                /*Intent returnIntent = new Intent();
+                returnIntent.putExtra()*/
                 finish();
             }
         });

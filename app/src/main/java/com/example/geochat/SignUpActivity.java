@@ -365,7 +365,7 @@ public class SignUpActivity extends AppCompatActivity implements LoaderCallbacks
     }
 
     private void startActivities(User user) {
-        Intent i = new Intent(this, MainActivity.class);
+        Intent i = new Intent(this, GroupActivity.class);
         i.putExtra("nick", user.getNick());
         i.putExtra("name", user.getName());
         startActivity(i);
