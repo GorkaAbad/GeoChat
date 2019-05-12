@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:2:1-54:12
-INJECTED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:2:1-54:12
-INJECTED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:2:1-54:12
-INJECTED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:2:1-54:12
+ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:2:1-57:12
+INJECTED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:2:1-57:12
+INJECTED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:2:1-57:12
+INJECTED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:2:1-57:12
 MERGED from [com.android.support:multidex:1.0.3] /home/ieltxu/.gradle/caches/transforms-2/files-2.1/ccd2630d5415b584661b359e941640ea/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:design:28.0.0] /home/ieltxu/.gradle/caches/transforms-2/files-2.1/dbd911a816ed76394deb4ef76c95aed1/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.gms:play-services:12.0.1] /home/ieltxu/.gradle/caches/transforms-2/files-2.1/adba648f704be2d0a5bb0613e73c07e5/AndroidManifest.xml:2:1-6:12
@@ -140,20 +140,20 @@ MERGED from [com.google.android.gms:play-services-vision-common-license:12.0.1] 
 MERGED from [com.google.android.gms:play-services-vision-license:12.0.1] /home/ieltxu/.gradle/caches/transforms-2/files-2.1/36ce8086ec380bc4f6691e4e18a4b620/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.gms:play-services-wallet-license:12.0.1] /home/ieltxu/.gradle/caches/transforms-2/files-2.1/694224b15e0313d5781acf0767156ef4/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.gms:play-services-wearable-license:12.0.1] /home/ieltxu/.gradle/caches/transforms-2/files-2.1/003ba7eba67d5da8db90ef498a3d1867/AndroidManifest.xml:17:1-24:12
-INJECTED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:2:1-54:12
-INJECTED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:2:1-54:12
-INJECTED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:2:1-54:12
+INJECTED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:2:1-57:12
+INJECTED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:2:1-57:12
+INJECTED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:2:1-57:12
 	package
 		ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:3:5-34
 		INJECTED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml
 		INJECTED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml
-		ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:2:1-54:12
+		ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:2:1-57:12
 		INJECTED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml
-		ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:2:1-54:12
+		ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:2:1-57:12
 		INJECTED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:2:11-69
@@ -219,8 +219,12 @@ uses-permission#android.permission.ACCESS_COARSE_LOCATION
 ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:8:5-81
 	android:name
 		ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:8:22-78
+uses-permission#android.permission.FOREGROUND_SERVICE
+ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:9:5-76
+	android:name
+		ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:9:22-74
 application
-ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:10:5-52:19
+ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:11:5-55:19
 MERGED from [com.android.support:design:28.0.0] /home/ieltxu/.gradle/caches/transforms-2/files-2.1/dbd911a816ed76394deb4ef76c95aed1/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:design:28.0.0] /home/ieltxu/.gradle/caches/transforms-2/files-2.1/dbd911a816ed76394deb4ef76c95aed1/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.gms:play-services:12.0.1] /home/ieltxu/.gradle/caches/transforms-2/files-2.1/adba648f704be2d0a5bb0613e73c07e5/AndroidManifest.xml:5:5-20
@@ -416,87 +420,91 @@ MERGED from [com.google.android.gms:play-services-wearable-license:12.0.1] /home
 	android:appComponentFactory
 		ADDED from [com.android.support:support-compat:28.0.0] /home/ieltxu/.gradle/caches/transforms-2/files-2.1/7ba65032b52998c762168d4923d88f5c/AndroidManifest.xml:22:18-91
 	android:supportsRtl
-		ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:15:9-35
+		ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:16:9-35
 	android:label
-		ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:13:9-41
+		ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:14:9-41
 	android:roundIcon
-		ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:14:9-54
+		ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:15:9-54
 	android:icon
-		ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:12:9-43
+		ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:13:9-43
 	android:allowBackup
-		ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:11:9-35
+		ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:12:9-35
 	android:theme
-		ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:16:9-68
+		ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:17:9-68
 activity#com.example.geochat.CreateGroupActivity
-ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:17:9-66
+ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:18:9-66
 	android:name
-		ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:17:19-54
+		ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:18:19-54
 activity#com.example.geochat.InvitarActivity
-ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:18:9-53
+ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:19:9-53
 	android:name
-		ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:18:19-50
+		ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:19:19-50
 activity#com.example.geochat.GroupActivity
-ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:19:9-51
+ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:20:9-51
 	android:name
-		ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:19:19-48
+		ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:20:19-48
 activity#com.example.geochat.LoginActivity
-ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:20:9-28:20
+ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:21:9-29:20
 	android:label
-		ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:22:13-45
+		ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:23:13-45
 	android:name
-		ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:21:13-42
+		ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:22:13-42
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:23:13-27:29
+ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:24:13-28:29
 action#android.intent.action.MAIN
-ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:24:17-69
+ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:25:17-69
 	android:name
-		ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:24:25-66
+		ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:25:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:26:17-77
+ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:27:17-77
 	android:name
-		ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:26:27-74
+		ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:27:27-74
 activity#com.example.geochat.SignUpActivity
-ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:29:9-31:59
+ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:30:9-32:59
 	android:label
-		ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:31:13-56
+		ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:32:13-56
 	android:name
-		ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:30:13-43
+		ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:31:13-43
 activity#com.example.geochat.MapActivity
-ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:32:9-49
+ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:33:9-49
 	android:name
-		ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:32:19-46
+		ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:33:19-46
 activity#com.example.geochat.MainActivity
-ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:33:9-35:59
+ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:34:9-36:59
 	android:label
-		ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:35:13-56
+		ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:36:13-56
 	android:name
-		ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:34:13-41
+		ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:35:13-41
+service#com.example.geochat.GeoService
+ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:37:9-39:24
+	android:name
+		ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:38:13-39
 service#com.example.geochat.Firebase
-ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:37:9-44:19
+ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:40:9-47:19
 	android:enabled
-		ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:39:13-35
+		ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:42:13-35
 	android:exported
-		ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:40:13-36
+		ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:43:13-36
 	android:name
-		ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:38:13-37
+		ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:41:13-37
 intent-filter#action:name:com.google.firebase.MESSAGING_EVENT
-ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:41:13-43:29
+ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:44:13-46:29
 action#com.google.firebase.MESSAGING_EVENT
-ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:42:17-78
+ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:45:17-78
 	android:name
-		ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:42:25-75
+		ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:45:25-75
 meta-data#com.google.firebase.messaging.default_notification_channel_id
-ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:46:9-48:49
+ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:49:9-51:49
 	android:value
-		ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:48:13-46
+		ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:51:13-46
 	android:name
-		ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:47:13-89
+		ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:50:13-89
 meta-data#com.google.android.geo.API_KEY
-ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:49:9-51:71
+ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:52:9-54:71
 	android:value
-		ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:51:13-68
+		ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:54:13-68
 	android:name
-		ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:50:13-58
+		ADDED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml:53:13-58
 uses-sdk
 INJECTED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/ieltxu/GeoChat/app/src/main/AndroidManifest.xml

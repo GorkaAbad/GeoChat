@@ -442,7 +442,10 @@ public class Database extends AsyncTask<String, String, ArrayList<Grupo>> {
 
     @Override
     protected ArrayList<Grupo> doInBackground(String... strings) {
-        if(strings[0].equals("create")){
+        if(strings[0].equals("update")){
+            Log.d("MAPA","SERVICIO");
+            actualizarLatLong(strings[1],strings[2],strings[3]);
+        }else if(strings[0].equals("create")){
             crearGrupo(strings[1], strings[2]);
         }else if (strings[0].equals("add")) {
             anadirUsuarioAGrupo(strings[1], strings[2]);
